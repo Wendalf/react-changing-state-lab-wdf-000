@@ -33,9 +33,9 @@ class Game extends React.Component {
 
   getWinner () {
     let board = this.state.board;
-    let isWinComboX = (position) => {return board[position] === "X"};
-    let isWinComboO = (position) => {return board[position] === "O"};
-    let anyWin = (solution) => {return solution.every(isWinComboX) || solution.every(isWinComboO)};
+    let isWinComboX = (position) => board[position] === "X";
+    let isWinComboO = (position) => board[position] === "O";
+    let anyWin = (solution) => solution.every(isWinComboX) || solution.every(isWinComboO);
     let checkResult = solutions.find(anyWin);
 
     if(checkResult !== undefined) {
