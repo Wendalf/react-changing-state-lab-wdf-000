@@ -40,8 +40,6 @@ class Game extends React.Component {
 
     if(checkResult !== undefined) {
       return board[checkResult[0]]
-    } else {
-      return undefined;
     }
   }
 
